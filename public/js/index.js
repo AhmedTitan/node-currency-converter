@@ -14,7 +14,7 @@ convertButton.on('click', function() {
 //Functions
 var getCurrencyDetails = function(body){
     const Http = new XMLHttpRequest();
-    Http.open("POST", 'http://localhost:3000/convert');
+    Http.open("POST", 'https://morning-chamber-42980.herokuapp.com/'+'http://localhost:3000/convert');
     //Http.setRequestHeader('Authorization', 'Bearer ' + access_token);
     Http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     //Http.onload = requestComplete;
