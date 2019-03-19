@@ -14,7 +14,7 @@ convertButton.on('click', function() {
 //Functions
 var getCurrencyDetails = function(body){
     const Http = new XMLHttpRequest();
-    Http.open("POST", 'https://morning-chamber-42980.herokuapp.com/'+'http://localhost:3000/convert');
+    Http.open("POST", 'https://morning-chamber-42980.herokuapp.com/convert');
     //Http.setRequestHeader('Authorization', 'Bearer ' + access_token);
     Http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     //Http.onload = requestComplete;
@@ -38,7 +38,7 @@ var getCurrencyDetails = function(body){
 
 var getCountryDetails = function(body){
     const Http = new XMLHttpRequest();
-    Http.open("POST", 'https://morning-chamber-42980.herokuapp.com/'+'http://localhost:3000/country');
+    Http.open("POST", 'https://morning-chamber-42980.herokuapp.com/country');
     Http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     Http.send(JSON.stringify({country: body}));
    
