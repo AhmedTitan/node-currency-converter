@@ -2,10 +2,84 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Test page</title>
+        <title>Currency converter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="/css/style.css">
     </head>
-    <body>
-        <h1>Test page</h1>
-        <p>Hellow world.</p>
+    <body class="centered-form">
+        <div class="centered-form__form column">
+            
+                <div class="form-field">
+                    <h3>Currency converter</h3>
+                </div>
+                <div class="form-field">
+                    <label>Currency from</label>
+                    <input type="text" id="from" value="USD">   
+                </div>
+                <div class="form-field">
+                    <label>Currency to</label>
+                    <input type="text" id="to" value="LKR">
+                </div>
+                <div class="form-field">
+                    <label>Amount</label>
+                    <input type="text" id="amount" value="1" >
+                </div>
+                <div class="form-field">
+                    <button id="convert">Convert</button><br />
+                </div>                
+            
+        </div>
+        
+        <div class="centered-form__form column-wide">
+            
+                <div class="form-field">
+                    <label  for="">Currency Details</label>
+                    <textarea id="currencyDetails" rows = "5" cols = "60" name = "description"></textarea>
+                </div>
+                <div class="form-field">
+                    <h3>More details about this country</h3>
+                </div>
+            <div class="column-90">
+                <div class="form-field-label">                
+                    <label >Capital: </label>                
+                    <label class="column-right" id="c_capital">--</label>               
+                </div>
+                <div class="form-field-label">
+                        <label>Region: </label>
+                        <label class="column-right" id="c_region">--</label>
+                </div>
+                <div class="form-field-label">
+                        <label>Subregion: </label>
+                        <label class="column-right" id="c_subregion">--</label>
+                </div>
+                <div class="form-field-label">
+                        <label>Currency Name: </label>
+                        <label class="column-right" id="c_currencyName">--</label>
+                </div>
+                <div class="form-field-label">
+                        <label>Population: </label>
+                        <label class="column-right" id="c_population">--</label>
+                </div> 
+            </div>
+
+            <div class="column-right">
+                <div id="clkpopup" class="form-field-label column popup" onclick="myFunction()"> ! API details               
+                    <span class="popuptext" id="myPopup">Using fixer.io API to get currency rates and restcountries.eu to get informations about countries</span>
+                </div>
+            </div>        
+            
+            
+        </div>
+
+
+        <script src="/js/libs/jquery-3.3.1.min.js"></script>
+        <script src="/js/index.js"></script>
+
+        <script>
+            function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
     </body>
 </html>
